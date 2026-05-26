@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
+import Link from 'next/link';
 import type { Tool } from '@/types/tool';
 
 type MediaType = 'static' | 'video' | 'both';
@@ -270,12 +271,17 @@ export default function AIToolComparator({ tools }: Props) {
                   </div>
 
                   {/* CTA */}
-                  {(r.tool.affiliateUrl || r.tool.websiteUrl) && (
-                    <a href={r.tool.affiliateUrl || r.tool.websiteUrl} target="_blank" rel={r.tool.affiliateUrl ? "sponsored noopener noreferrer" : "noopener noreferrer"} className="btn-accent">
-                      {r.tool.affiliateUrl ? '公式サイトを見る（PR）' : '公式サイトを見る'}
-                      <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                    </a>
-                  )}
+                  <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'center', marginTop: 12 }}>
+                    {(r.tool.affiliateUrl || r.tool.websiteUrl) && (
+                      <a href={r.tool.affiliateUrl || r.tool.websiteUrl} target="_blank" rel={r.tool.affiliateUrl ? "sponsored noopener noreferrer" : "noopener noreferrer"} className="btn-accent">
+                        {r.tool.affiliateUrl ? '公式サイトを見る（PR）' : '公式サイトを見る'}
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      </a>
+                    )}
+                    <Link href={`/tools/${r.tool.id}`} style={{ fontSize: 14, color: '#0054ff', textDecoration: 'underline' }}>
+                      詳細を見る →
+                    </Link>
+                  </div>
                 </div>
               );
             })}

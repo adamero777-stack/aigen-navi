@@ -17,6 +17,7 @@ export interface Tool {
   freeTrialAvailable?: boolean;
   supportLevel?: 'community' | 'email' | 'priority';
   alternativeTools?: string[];
+  youtubeVideos?: string[];
 }
 
 export interface ComparedResult {

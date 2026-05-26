@@ -10,14 +10,25 @@
     "monthlyPrice": "$10〜120/月",
     "imageQuality": "極めて高い",
     "generationTime": "30〜60秒",
-    "features": ["業界最高峰の画質", "アーティスティック表現", "v7最新モデル", "Web/Discord対応"],
+    "features": [
+      "業界最高峰の画質",
+      "アーティスティック表現",
+      "v7最新モデル",
+      "Web/Discord対応"
+    ],
     "bestFor": "プロ品質・アート性重視",
     "description": "業界最高峰のAI画像生成。アーティスティックな美しさで圧倒的人気。",
     "websiteUrl": "https://midjourney.com",
     "affiliateUrl": "",
     "freeTrialAvailable": false,
     "supportLevel": "community",
-    "alternativeTools": ["pixeldojo", "adobe-firefly"]
+    "alternativeTools": [
+      "pixeldojo",
+      "adobe-firefly"
+    ],
+    "youtubeVideos": [
+      "blogDKXfIDw"
+    ]
   },
   {
     "id": "chatgpt-image",
@@ -30,14 +41,24 @@
     "monthlyPrice": "$20/月〜（ChatGPT Plus）",
     "imageQuality": "非常に高い",
     "generationTime": "20〜40秒",
-    "features": ["GPT-4o画像生成", "テキスト精度", "対話編集", "ChatGPT統合"],
+    "features": [
+      "GPT-4o画像生成",
+      "テキスト精度",
+      "対話編集",
+      "ChatGPT統合"
+    ],
     "bestFor": "汎用性・指示の正確性",
     "description": "OpenAIのChatGPT内で利用可能。対話形式で画像生成・編集ができる。",
     "websiteUrl": "https://chat.openai.com",
     "affiliateUrl": "",
     "freeTrialAvailable": true,
     "supportLevel": "email",
-    "alternativeTools": ["adobe-firefly", "canva-pro", "getimg-ai"]
+    "alternativeTools": [
+      "adobe-firefly",
+      "canva-pro",
+      "getimg-ai"
+    ],
+    "youtubeVideos": []
   },
   {
     "id": "stable-diffusion",
@@ -50,14 +71,23 @@
     "monthlyPrice": "無料〜",
     "imageQuality": "高い",
     "generationTime": "5〜15秒",
-    "features": ["完全オープンソース", "ローカル実行可", "無制限カスタマイズ", "商用利用可"],
+    "features": [
+      "完全オープンソース",
+      "ローカル実行可",
+      "無制限カスタマイズ",
+      "商用利用可"
+    ],
     "bestFor": "コスト最小化・技術者向け",
     "description": "オープンソースの定番。ローカル実行で完全無料・無制限利用が可能。",
     "websiteUrl": "https://stability.ai",
     "affiliateUrl": "",
     "freeTrialAvailable": true,
     "supportLevel": "community",
-    "alternativeTools": ["getimg-ai", "pixeldojo"]
+    "alternativeTools": [
+      "getimg-ai",
+      "pixeldojo"
+    ],
+    "youtubeVideos": []
   },
   {
     "id": "flux",
@@ -70,14 +100,23 @@
     "monthlyPrice": "従量課金（API）",
     "imageQuality": "極めて高い",
     "generationTime": "4〜10秒",
-    "features": ["元SD開発陣が開発", "FLUX.2最新", "プロンプト忠実度", "OSS版あり"],
+    "features": [
+      "元SD開発陣が開発",
+      "FLUX.2最新",
+      "プロンプト忠実度",
+      "OSS版あり"
+    ],
     "bestFor": "最先端品質・開発者",
     "description": "Black Forest Labs製。プロンプト忠実度でMidjourneyを超えるとの評価。",
     "websiteUrl": "https://bfl.ai",
     "affiliateUrl": "",
     "freeTrialAvailable": true,
     "supportLevel": "community",
-    "alternativeTools": ["getimg-ai", "pixeldojo"]
+    "alternativeTools": [
+      "getimg-ai",
+      "pixeldojo"
+    ],
+    "youtubeVideos": []
   },
   {
     "id": "kling",
@@ -89,14 +128,22 @@
     "speedScore": 7,
     "monthlyPrice": "$6.99〜$92/月",
     "generationTime": "1〜5分",
-    "features": ["最大3分動画", "ネイティブ音声生成", "4K対応", "Kling 3.0物理表現"],
+    "features": [
+      "最大3分動画",
+      "ネイティブ音声生成",
+      "4K対応",
+      "Kling 3.0物理表現"
+    ],
     "bestFor": "リアル動画・長尺コンテンツ",
     "description": "中国Kuaishou製。リアルな物理表現と長尺対応で動画生成の最有力候補。",
     "websiteUrl": "https://klingai.com",
     "affiliateUrl": "",
     "freeTrialAvailable": true,
     "supportLevel": "email",
-    "alternativeTools": ["pixeldojo"]
+    "alternativeTools": [
+      "pixeldojo"
+    ],
+    "youtubeVideos": []
   },
   {
     "id": "runway",
@@ -108,14 +155,23 @@
     "speedScore": 8.5,
     "monthlyPrice": "$15〜95/月",
     "generationTime": "数十秒〜数分",
-    "features": ["Gen-4最新モデル", "キャラ一貫性", "無制限プラン", "高速処理"],
+    "features": [
+      "Gen-4最新モデル",
+      "キャラ一貫性",
+      "無制限プラン",
+      "高速処理"
+    ],
     "bestFor": "プロ動画制作・商業案件",
     "description": "映像クリエイター向けの定番。キャラ一貫性と処理速度で業界トップクラス。",
     "websiteUrl": "https://runwayml.com",
     "affiliateUrl": "",
     "freeTrialAvailable": true,
     "supportLevel": "email",
-    "alternativeTools": ["pixeldojo", "adobe-firefly"]
+    "alternativeTools": [
+      "pixeldojo",
+      "adobe-firefly"
+    ],
+    "youtubeVideos": []
   },
   {
     "id": "veo",
@@ -127,14 +183,23 @@
     "speedScore": 7.5,
     "monthlyPrice": "$19.99〜$249.99/月",
     "generationTime": "数十秒〜数分",
-    "features": ["最高クラスの画質", "ネイティブ音声", "Google統合", "Veo 3.1最新"],
+    "features": [
+      "最高クラスの画質",
+      "ネイティブ音声",
+      "Google統合",
+      "Veo 3.1最新"
+    ],
     "bestFor": "最高品質・ハイエンド用途",
     "description": "Google製の最高峰動画生成AI。リアルな物理表現と音声同時生成が圧倒的。",
     "websiteUrl": "https://deepmind.google/models/veo/",
     "affiliateUrl": "",
     "freeTrialAvailable": true,
     "supportLevel": "priority",
-    "alternativeTools": ["pixeldojo", "adobe-firefly"]
+    "alternativeTools": [
+      "pixeldojo",
+      "adobe-firefly"
+    ],
+    "youtubeVideos": []
   },
   {
     "id": "adobe-firefly",
@@ -147,14 +212,20 @@
     "monthlyPrice": "$9.99/月〜",
     "imageQuality": "非常に高い",
     "generationTime": "10〜30秒",
-    "features": ["Creative Cloud統合", "商用利用安心", "画像・動画両対応", "Adobe品質"],
+    "features": [
+      "Creative Cloud統合",
+      "商用利用安心",
+      "画像・動画両対応",
+      "Adobe品質"
+    ],
     "bestFor": "Adobeユーザー・商用案件",
     "description": "Adobe Creative Cloud統合。著作権クリアで商用利用に最適。",
     "websiteUrl": "https://firefly.adobe.com",
     "affiliateUrl": "",
     "freeTrialAvailable": true,
     "supportLevel": "priority",
-    "alternativeTools": []
+    "alternativeTools": [],
+    "youtubeVideos": []
   },
   {
     "id": "canva-pro",
@@ -167,14 +238,20 @@
     "monthlyPrice": "¥1,500/月〜",
     "imageQuality": "良い",
     "generationTime": "5〜10秒",
-    "features": ["AI画像生成統合", "豊富なテンプレート", "デザイン未経験OK", "SNS最適化"],
+    "features": [
+      "AI画像生成統合",
+      "豊富なテンプレート",
+      "デザイン未経験OK",
+      "SNS最適化"
+    ],
     "bestFor": "デザイン初心者・SNS運用",
     "description": "デザイン全般＋AI画像生成。初心者でもすぐ使える総合ツール。",
     "websiteUrl": "https://canva.com",
     "affiliateUrl": "",
     "freeTrialAvailable": true,
     "supportLevel": "email",
-    "alternativeTools": []
+    "alternativeTools": [],
+    "youtubeVideos": []
   },
   {
     "id": "envato",
@@ -187,14 +264,20 @@
     "monthlyPrice": "$16.50/月〜",
     "imageQuality": "高い",
     "generationTime": "即時（素材ライブラリ）",
-    "features": ["数百万の素材", "AI生成＋ストック", "商用利用OK", "テンプレート豊富"],
+    "features": [
+      "数百万の素材",
+      "AI生成＋ストック",
+      "商用利用OK",
+      "テンプレート豊富"
+    ],
     "bestFor": "素材まとめて確保したい人",
     "description": "AI生成＋膨大なストック素材。デザイン仕事の効率化に最適。",
     "websiteUrl": "https://elements.envato.com",
     "affiliateUrl": "",
     "freeTrialAvailable": true,
     "supportLevel": "email",
-    "alternativeTools": []
+    "alternativeTools": [],
+    "youtubeVideos": []
   },
   {
     "id": "getimg-ai",
@@ -207,14 +290,20 @@
     "monthlyPrice": "無料〜$12/月",
     "imageQuality": "非常に高い",
     "generationTime": "3〜10秒",
-    "features": ["FLUX.2/GPT Image統合", "画像→動画", "100無料クレジット", "商用利用可"],
+    "features": [
+      "FLUX.2/GPT Image統合",
+      "画像→動画",
+      "100無料クレジット",
+      "商用利用可"
+    ],
     "bestFor": "複数モデルを試したい人",
     "description": "FLUX.2/GPT Image等の主要モデルを1つの画面で使える統合プラットフォーム。",
     "websiteUrl": "https://getimg.ai",
     "affiliateUrl": "",
     "freeTrialAvailable": true,
     "supportLevel": "email",
-    "alternativeTools": []
+    "alternativeTools": [],
+    "youtubeVideos": []
   },
   {
     "id": "pixeldojo",
@@ -227,13 +316,19 @@
     "monthlyPrice": "$10/月〜",
     "imageQuality": "高い",
     "generationTime": "10〜30秒",
-    "features": ["Midjourney風UI", "画像＋動画両対応", "複数モデル統合", "コミュニティ充実"],
+    "features": [
+      "Midjourney風UI",
+      "画像＋動画両対応",
+      "複数モデル統合",
+      "コミュニティ充実"
+    ],
     "bestFor": "Midjourney代替・コスト重視",
     "description": "Midjourneyの体験を低コストで提供。画像・動画統合プラットフォーム。",
     "websiteUrl": "https://pixeldojo.ai",
     "affiliateUrl": "",
     "freeTrialAvailable": true,
     "supportLevel": "community",
-    "alternativeTools": []
+    "alternativeTools": [],
+    "youtubeVideos": []
   }
 ]
