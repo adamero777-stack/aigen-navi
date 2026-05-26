@@ -279,7 +279,7 @@ export default function AIToolComparator({ tools }: Props) {
                       </a>
                     )}
                     <Link href={`/tools/${r.tool.id}`} className="btn-accent" style={{ background: '#facc15', color: '#000' }}>
-                      詳しい機能を見る →
+                      詳しい情報を見る →
                     </Link>
                   </div>
                 </div>
