@@ -2,6 +2,7 @@ export interface Tool {
   id: string;
   name: string;
   type: 'static' | 'video' | 'both';
+  category: 'major' | 'affiliate';
   qualityScore: number;
   costScore: number;
   speedScore: number;
@@ -12,8 +13,10 @@ export interface Tool {
   bestFor: string;
   description?: string;
   websiteUrl?: string;
+  affiliateUrl?: string;
   freeTrialAvailable?: boolean;
   supportLevel?: 'community' | 'email' | 'priority';
+  alternativeTools?: string[];
 }
 
 export interface ComparedResult {
