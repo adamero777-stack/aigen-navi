@@ -211,3 +211,16 @@ body {
 @media (max-width: 1099px) {
   .purpose-sidebar { display: none; }
 }
+
+
+.main-area {
+  min-height: 100vh;
+  background: #fff;
+}
+
+@media (min-width: 1100px) {
+  .main-area {
+    padding-left: 240px;
+    padding-right: 240px;
+  }
+}
