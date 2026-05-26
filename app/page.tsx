@@ -19,7 +19,7 @@ export default function Home() {
       <ToolsSidebar />
       <PurposeSidebar />
       <main style={{ minHeight: '100vh', background: '#fff' }}>
-        <div id="diagnosis" style={{ maxWidth: 680, margin: '0 auto', padding: '40px 20px 80px' }}>
+        <div id="diagnosis" style={{ maxWidth: 620, margin: '0 auto', padding: '40px 20px 80px' }}>
           <AIToolComparator tools={tools} />
         </div>
         <footer style={{ borderTop: '1px solid var(--color-border)', padding: '32px 20px', textAlign: 'center' }}>

@@ -35,7 +35,7 @@ export default async function ToolDetailPage({ params }: { params: Promise<{ id:
       <ToolsSidebar />
       <PurposeSidebar />
       <main style={{ minHeight: '100vh', background: '#fff' }}>
-        <div style={{ maxWidth: 880, margin: '0 auto', padding: '40px 20px 80px' }}>
+        <div style={{ maxWidth: 620, margin: '0 auto', padding: '40px 20px 80px' }}>
           <Link href="/" style={{ fontSize: 14, color: 'var(--color-text-muted)', textDecoration: 'none' }}>← トップへ戻る</Link>
 
           <h1 style={{ fontSize: 32, marginTop: 20, marginBottom: 8 }}>{tool.name}</h1>

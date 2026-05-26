@@ -27,7 +27,7 @@ export default function Header() {
       transition: 'all 0.2s',
     }}>
       <div style={{
-        maxWidth: 960,
+        maxWidth: 820,
         margin: '0 auto',
         padding: '0 20px',
         height: 60,
