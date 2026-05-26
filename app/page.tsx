@@ -1,6 +1,7 @@
 import AIToolComparator from '@/components/AIToolComparator';
 import Header from '@/components/Header';
 import BackToTop from '@/components/BackToTop';
+import ToolsSidebar from '@/components/ToolsSidebar';
 import type { Tool } from '@/types/tool';
 import toolsData from '@/data/tools.json';
 
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <>
       <Header />
+      <ToolsSidebar />
       <main style={{ minHeight: '100vh', background: '#fff' }}>
         <div id="diagnosis" style={{ maxWidth: 680, margin: '0 auto', padding: '40px 20px 80px' }}>
           <AIToolComparator tools={tools} />
