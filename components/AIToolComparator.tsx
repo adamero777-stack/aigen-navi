@@ -44,24 +44,32 @@ const PRIORITIES = [
 
 const TOOL_TAGS: Record<string, { purposes: Purpose[]; priority: Record<Priority, number> }> = {
   midjourney:         { purposes: ['sns','ad','hobby','blog','business'], priority: { quality: 10, cost: 5, ease: 6 } },
-  'dall-e3':          { purposes: ['sns','blog','ad','business','hobby'], priority: { quality: 8, cost: 7, ease: 9 } },
-  'stable-diffusion': { purposes: ['hobby','blog','ad','sns'],           priority: { quality: 6, cost: 10, ease: 4 } },
+  'chatgpt-image':    { purposes: ['sns','blog','ad','business','hobby'], priority: { quality: 8, cost: 7, ease: 10 } },
+  'stable-diffusion': { purposes: ['hobby','blog','ad','sns'],            priority: { quality: 6, cost: 10, ease: 4 } },
+  flux:               { purposes: ['ad','blog','business','hobby'],       priority: { quality: 10, cost: 7, ease: 5 } },
+  kling:              { purposes: ['short','youtube','pro-video','hobby'],priority: { quality: 9, cost: 7, ease: 7 } },
   runway:             { purposes: ['pro-video','youtube','ad','short'],   priority: { quality: 10, cost: 5, ease: 6 } },
-  descript:           { purposes: ['youtube','education','short'],        priority: { quality: 7, cost: 8, ease: 10 } },
-  'adobe-firefly':    { purposes: ['ad','business','blog','sns'],        priority: { quality: 8, cost: 6, ease: 8 } },
-  genmo:              { purposes: ['short','hobby','youtube','education'],priority: { quality: 7, cost: 9, ease: 9 } },
-  'canva-pro':        { purposes: ['sns','blog','business','ad'],        priority: { quality: 6, cost: 7, ease: 10 } },
+  veo:                { purposes: ['pro-video','ad','youtube'],           priority: { quality: 10, cost: 4, ease: 7 } },
+  'adobe-firefly':    { purposes: ['ad','business','blog','sns'],         priority: { quality: 8, cost: 6, ease: 8 } },
+  'canva-pro':        { purposes: ['sns','blog','business','ad'],         priority: { quality: 6, cost: 7, ease: 10 } },
+  envato:             { purposes: ['ad','business','blog','sns','hobby'], priority: { quality: 8, cost: 7, ease: 9 } },
+  'getimg-ai':        { purposes: ['sns','ad','blog','hobby','short'],    priority: { quality: 8, cost: 9, ease: 9 } },
+  pixeldojo:          { purposes: ['sns','hobby','blog','short'],         priority: { quality: 8, cost: 8, ease: 8 } },
 };
 
 const WHY_TEXT: Record<string, Record<string, string>> = {
-  midjourney:         { ease: 'Discordから手軽にプロ品質の画像を生成', cost: 'プラン内なら大量生成が可能', quality: '現時点で最高峰の画像品質。アート性が際立つ' },
-  'dall-e3':          { ease: 'ChatGPTから日本語で指示するだけ。最も簡単', cost: 'ChatGPT Plus内で追加料金なし', quality: 'テキスト理解力が高く、意図通りの画像を生成' },
+  midjourney:         { ease: 'Discord/Webから手軽にプロ品質の画像を生成', cost: 'プラン内なら大量生成が可能', quality: '現時点で最高峰の画像品質。アート性が際立つ' },
+  'chatgpt-image':    { ease: 'ChatGPTから日本語で指示。対話で編集も可能', cost: 'ChatGPT Plus内で追加料金なし', quality: 'GPT-4oの理解力で意図通りの画像を生成' },
   'stable-diffusion': { ease: 'WebUIで無料利用可能', cost: '完全無料でローカル実行可能。コスト最強', quality: 'カスタムモデルで独自の品質を追求できる' },
+  flux:               { ease: 'API/各種UIから利用。技術者向け', cost: '従量課金で柔軟。OSS版は無料', quality: 'プロンプト忠実度が業界トップクラス' },
+  kling:              { ease: 'ブラウザで最大3分動画を生成', cost: '$6.99〜と動画AI最安クラス', quality: 'リアルな物理表現と音声同時生成が強力' },
   runway:             { ease: 'ブラウザ上で直感的に操作可能', cost: '無料枠あり。プロ機能は有料', quality: 'AI動画生成のトップクラス。映像プロ御用達' },
-  descript:           { ease: 'テキスト編集感覚で動画を編集。最も直感的', cost: '月$12〜で動画編集が完結', quality: '文字起こし精度が高く、効率的な編集が可能' },
-  'adobe-firefly':    { ease: 'Photoshop・Expressと連携。Adobe慣れなら最速', cost: '月$4.99〜と安い。CC統合で追加コスト不要', quality: 'Adobe品質。著作権的にも安心して商用利用可能' },
-  genmo:              { ease: 'ブラウザで即座に動画生成。学習コストゼロ', cost: '無料プランが充実。気軽に試せる', quality: 'テンプレートが豊富で安定した品質' },
-  'canva-pro':        { ease: 'テンプレート選んで編集するだけ。デザイン知識不要', cost: 'AI機能込みで年$180。オールインワン', quality: 'テンプレートベースで一定品質を担保' },
+  veo:                { ease: 'GeminiやAI Studioから利用可能', cost: 'Google AI Pro $19.99〜', quality: '最高峰の画質＋ネイティブ音声生成' },
+  'adobe-firefly':    { ease: 'Photoshop・Expressと連携。Adobe慣れなら最速', cost: '月$9.99〜。CC統合で追加コスト不要', quality: 'Adobe品質。商用利用も著作権安心' },
+  'canva-pro':        { ease: 'テンプレート選んで編集するだけ。デザイン知識不要', cost: '月¥1,500〜。AI機能込みオールインワン', quality: 'テンプレートベースで一定品質を担保' },
+  envato:             { ease: '素材＋AI生成のハイブリッド。すぐ使える', cost: '月$16.50で数百万素材使い放題', quality: 'プロ素材＋AIで安定の高品質' },
+  'getimg-ai':        { ease: 'FLUX/GPT Image等を1画面で。無料枠あり', cost: '無料100クレジット/月。基本$12〜', quality: '主要モデル統合で最先端の品質' },
+  pixeldojo:          { ease: 'Midjourney風UIで直感的', cost: '$10〜と低コスト', quality: 'Midjourneyの体験を低コストで再現' },
 };
 
 export default function AIToolComparator({ tools }: Props) {
