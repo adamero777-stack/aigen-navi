@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import BackToTop from '@/components/BackToTop';
 import ToolsSidebar from '@/components/ToolsSidebar';
+import PurposeSidebar from '@/components/PurposeSidebar';
 import VideoGallery from './VideoGallery';
 import type { Tool } from '@/types/tool';
 import toolsData from '@/data/tools.json';
@@ -32,6 +33,7 @@ export default async function ToolDetailPage({ params }: { params: Promise<{ id:
     <>
       <Header />
       <ToolsSidebar />
+      <PurposeSidebar />
       <main style={{ minHeight: '100vh', background: '#fff' }}>
         <div style={{ maxWidth: 880, margin: '0 auto', padding: '40px 20px 80px' }}>
           <Link href="/" style={{ fontSize: 14, color: 'var(--color-text-muted)', textDecoration: 'none' }}>← トップへ戻る</Link>
