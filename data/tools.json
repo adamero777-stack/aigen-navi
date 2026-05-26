@@ -28,7 +28,25 @@
     ],
     "youtubeVideos": [
       "blogDKXfIDw"
-    ]
+    ],
+    "pros": [
+      "業界最高峰のアート性・画質",
+      "v7で動画生成にも対応",
+      "活発なコミュニティ",
+      "Web版で手軽に利用可能"
+    ],
+    "cons": [
+      "無料プランなし（$10/月〜）",
+      "日本語プロンプトの精度がやや低い",
+      "商用利用条件に注意が必要"
+    ],
+    "recommendedFor": [
+      "アート性重視のクリエイター",
+      "SNS映えする画像が欲しい人",
+      "ポートフォリオ制作"
+    ],
+    "detailedPricing": "Basic $10/月（200枚）、Standard $30/月（900枚）、Pro $60/月（1800枚）、Mega $120/月（3600枚）",
+    "comparison": "Fluxと比べアート性が高い。ChatGPT画像生成と比べ操作の自由度が高いが学習コストあり。"
   },
   {
     "id": "chatgpt-image",
@@ -58,7 +76,25 @@
       "canva-pro",
       "getimg-ai"
     ],
-    "youtubeVideos": []
+    "youtubeVideos": [],
+    "pros": [
+      "日本語で指示するだけの簡単操作",
+      "対話形式で画像を修正可能",
+      "ChatGPT Plusに含まれ追加料金なし",
+      "テキスト理解力が非常に高い"
+    ],
+    "cons": [
+      "1日の生成枚数に制限あり",
+      "アート性はMidjourneyに劣る",
+      "細かいスタイル制御が限定的"
+    ],
+    "recommendedFor": [
+      "AI画像生成が初めての人",
+      "ChatGPTを既に使っている人",
+      "指示通りの画像が欲しいビジネスユーザー"
+    ],
+    "detailedPricing": "ChatGPT Plus $20/月（画像生成含む）、ChatGPT Pro $200/月（ほぼ無制限）",
+    "comparison": "Midjourneyよりアート性は劣るが操作の簡単さは圧倒的。Canvaより高品質な画像を生成できる。"
   },
   {
     "id": "stable-diffusion",
@@ -87,7 +123,25 @@
       "getimg-ai",
       "pixeldojo"
     ],
-    "youtubeVideos": []
+    "youtubeVideos": [],
+    "pros": [
+      "完全無料でローカル実行可能",
+      "無制限にカスタマイズ可能",
+      "商用利用OK",
+      "モデルの選択肢が豊富"
+    ],
+    "cons": [
+      "セットアップに技術知識が必要",
+      "高性能GPUが必要",
+      "UIが直感的でない"
+    ],
+    "recommendedFor": [
+      "技術者・エンジニア",
+      "コスト最小化したい大量生成",
+      "独自モデルを作りたい人"
+    ],
+    "detailedPricing": "ソフトウェア自体は無料。クラウド利用はサービスによる（Stability AI APIは従量課金）",
+    "comparison": "Fluxの登場で品質面では追い上げられているが、エコシステムの成熟度とコミュニティの大きさはSD有利。"
   },
   {
     "id": "flux",
@@ -116,7 +170,25 @@
       "getimg-ai",
       "pixeldojo"
     ],
-    "youtubeVideos": []
+    "youtubeVideos": [],
+    "pros": [
+      "プロンプト忠実度が業界トップクラス",
+      "FLUX.2で大幅進化",
+      "OSS版（Schnell）が無料",
+      "高速生成（4〜10秒）"
+    ],
+    "cons": [
+      "まだ新しくエコシステムが発展途上",
+      "Web UIの選択肢が限られる",
+      "APIは従量課金で大量生成はコスト増"
+    ],
+    "recommendedFor": [
+      "最新技術を追いたい開発者",
+      "プロンプト通りの正確な画像が必要な人",
+      "Stable Diffusionからの乗り換え検討者"
+    ],
+    "detailedPricing": "FLUX.1 Schnell: 無料（Apache 2.0）、FLUX.2 Pro: API従量課金（bfl.ai経由）",
+    "comparison": "Midjourneyに匹敵する品質をオープンソースで実現。SDより新しいアーキテクチャで高品質。"
   },
   {
     "id": "kling",
@@ -143,7 +215,25 @@
     "alternativeTools": [
       "pixeldojo"
     ],
-    "youtubeVideos": []
+    "youtubeVideos": [],
+    "pros": [
+      "最大3分の長尺動画生成",
+      "ネイティブ音声生成対応",
+      "4K出力対応",
+      "Kling 3.0で物理表現が大幅進化"
+    ],
+    "cons": [
+      "クレジット制で使い切り",
+      "生成に時間がかかる（1〜5分）",
+      "中国製のため規約が分かりにくい"
+    ],
+    "recommendedFor": [
+      "動画クリエイター",
+      "長尺AIコンテンツ制作",
+      "TikTok/YouTube向け動画制作"
+    ],
+    "detailedPricing": "無料（66クレジット/日）、Standard $6.99/月（660クレジット）、Pro $25.99/月、Premier $64.99〜92/月",
+    "comparison": "Runwayより長尺対応で安価。Veoより低価格だがGoogle統合はなし。"
   },
   {
     "id": "runway",
@@ -171,7 +261,25 @@
       "pixeldojo",
       "adobe-firefly"
     ],
-    "youtubeVideos": []
+    "youtubeVideos": [],
+    "pros": [
+      "Gen-4モデルでキャラ一貫性が高い",
+      "無制限プラン($95/月)がある",
+      "処理速度が速い",
+      "プロ映像制作の定番"
+    ],
+    "cons": [
+      "高品質プランは高額",
+      "無料枠が少ない",
+      "学習コストがやや高い"
+    ],
+    "recommendedFor": [
+      "プロの映像制作者",
+      "CM・広告映像の制作",
+      "キャラクター一貫性が必要な制作"
+    ],
+    "detailedPricing": "Basic: 無料（125クレジット）、Standard $15/月、Pro $35/月、Unlimited $95/月",
+    "comparison": "Klingより処理速度が速い。Veoより安価で導入しやすい。キャラ一貫性は業界トップ。"
   },
   {
     "id": "veo",
@@ -199,7 +307,25 @@
       "pixeldojo",
       "adobe-firefly"
     ],
-    "youtubeVideos": []
+    "youtubeVideos": [],
+    "pros": [
+      "最高クラスの動画品質",
+      "ネイティブ音声同時生成",
+      "Google AIエコシステムとの統合",
+      "Veo 3.1で進化し続ける"
+    ],
+    "cons": [
+      "高額（Ultra $249.99/月）",
+      "生成量にクレジット制限あり",
+      "利用可能な地域に制限あり"
+    ],
+    "recommendedFor": [
+      "ハイエンド映像制作",
+      "Google Workspace利用企業",
+      "音声付き高品質動画が必要な案件"
+    ],
+    "detailedPricing": "Google AI Pro $19.99/月（1,000クレジット）、Google AI Ultra $249.99/月、API: Veo 3 $0.40/秒",
+    "comparison": "品質面で業界トップ。価格もトップ。Runwayの無制限プラン$95のほうがコスパは良い場合も。"
   },
   {
     "id": "adobe-firefly",
@@ -225,7 +351,25 @@
     "freeTrialAvailable": true,
     "supportLevel": "priority",
     "alternativeTools": [],
-    "youtubeVideos": []
+    "youtubeVideos": [],
+    "pros": [
+      "Creative Cloud統合でワークフローに組み込み",
+      "著作権クリアで商用利用安心",
+      "画像・動画両対応",
+      "Adobe品質の安定感"
+    ],
+    "cons": [
+      "Adobe製品に依存しがち",
+      "単体利用には割高感",
+      "生成の自由度はMidjourneyに劣る"
+    ],
+    "recommendedFor": [
+      "Adobeユーザー",
+      "商用案件で著作権が気になる人",
+      "デザイン業務でAI活用したい人"
+    ],
+    "detailedPricing": "Firefly単体 $9.99/月（100クレジット）、Creative Cloud All Apps $89.99/月に含まれる",
+    "comparison": "商用安全性はNo.1。品質はMidjourneyに劣るが著作権リスクゼロの安心感が最大の強み。"
   },
   {
     "id": "canva-pro",
@@ -251,7 +395,25 @@
     "freeTrialAvailable": true,
     "supportLevel": "email",
     "alternativeTools": [],
-    "youtubeVideos": []
+    "youtubeVideos": [],
+    "pros": [
+      "デザイン知識ゼロでも使える",
+      "テンプレートが豊富",
+      "AI画像生成＋デザインが一体化",
+      "チームコラボ機能"
+    ],
+    "cons": [
+      "AI画像の品質は専門ツールに劣る",
+      "細かいカスタマイズが限定的",
+      "テンプレ感が出やすい"
+    ],
+    "recommendedFor": [
+      "デザイン初心者",
+      "SNS運用担当",
+      "チームでの資料作成"
+    ],
+    "detailedPricing": "Free（制限あり）、Canva Pro ¥1,500/月（年払い¥12,000）、Teams ¥1,800/月/人",
+    "comparison": "専門AI生成ツールより品質は劣るが、デザイン→完成品までワンストップで完結する手軽さが最大の魅力。"
   },
   {
     "id": "envato",
@@ -277,7 +439,25 @@
     "freeTrialAvailable": true,
     "supportLevel": "email",
     "alternativeTools": [],
-    "youtubeVideos": []
+    "youtubeVideos": [],
+    "pros": [
+      "数百万点のプロ素材が使い放題",
+      "AI生成＋ストック素材のハイブリッド",
+      "商用利用OK",
+      "テンプレート豊富"
+    ],
+    "cons": [
+      "AI生成は補助的な位置づけ",
+      "解約すると素材が使えなくなる",
+      "日本語テンプレートが少ない"
+    ],
+    "recommendedFor": [
+      "素材をまとめて確保したい人",
+      "デザイン仕事の効率化",
+      "動画・Web制作者"
+    ],
+    "detailedPricing": "月額 $16.50/月（年払い）、月額 $33/月（月払い）",
+    "comparison": "AI専門ツールではなく素材プラットフォーム。Canvaよりプロ向け素材が充実。Adobe Stockの代替として人気。"
   },
   {
     "id": "getimg-ai",
@@ -303,7 +483,25 @@
     "freeTrialAvailable": true,
     "supportLevel": "email",
     "alternativeTools": [],
-    "youtubeVideos": []
+    "youtubeVideos": [],
+    "pros": [
+      "FLUX.2/GPT Image等の主要モデルを1画面で利用",
+      "無料100クレジット/月",
+      "画像→動画変換対応",
+      "商用利用可"
+    ],
+    "cons": [
+      "独自モデルではない（集約型）",
+      "高品質設定はクレジット消費大",
+      "日本語UIが不完全"
+    ],
+    "recommendedFor": [
+      "複数モデルを比較したい人",
+      "低予算で始めたい人",
+      "画像＋動画の両方が必要な人"
+    ],
+    "detailedPricing": "Free（100クレジット/月）、Basic $12/月（3,000クレジット）、Starter $29/月、Pro $99/月",
+    "comparison": "MidjourneyやDALL-Eを試す前の入門に最適。複数モデルを1画面で比較できる唯一のプラットフォーム。"
   },
   {
     "id": "pixeldojo",
@@ -329,6 +527,24 @@
     "freeTrialAvailable": true,
     "supportLevel": "community",
     "alternativeTools": [],
-    "youtubeVideos": []
+    "youtubeVideos": [],
+    "pros": [
+      "Midjourney風UIで直感的",
+      "画像＋動画両対応",
+      "コミュニティが活発",
+      "低コストで始められる"
+    ],
+    "cons": [
+      "知名度がまだ低い",
+      "独自モデルの品質は発展途上",
+      "日本語情報が少ない"
+    ],
+    "recommendedFor": [
+      "Midjourney代替を探している人",
+      "低コストで始めたい人",
+      "画像＋動画を1つのツールで使いたい人"
+    ],
+    "detailedPricing": "$10/月〜、プラン詳細は公式サイト参照",
+    "comparison": "Midjourneyの体験を低コストで再現。本家ほどの品質はないがコスパ重視なら十分な選択肢。"
   }
 ]

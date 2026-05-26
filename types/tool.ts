@@ -18,6 +18,11 @@ export interface Tool {
   supportLevel?: 'community' | 'email' | 'priority';
   alternativeTools?: string[];
   youtubeVideos?: string[];
+  pros?: string[];
+  cons?: string[];
+  recommendedFor?: string[];
+  detailedPricing?: string;
+  comparison?: string;
 }
 
 export interface ComparedResult {
