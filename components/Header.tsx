@@ -3,8 +3,8 @@
 import React, { useState, useEffect } from 'react';
 
 const NAV_LINKS = [
-  { label: 'ツール診断', href: '#diagnosis' },
-  { label: 'ツール一覧', href: '#tools' },
+  { label: 'ツール診断', href: '/#diagnosis' },
+  { label: 'ツール一覧', href: '/tools' },
 ];
 
 export default function Header() {
