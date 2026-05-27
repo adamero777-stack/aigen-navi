@@ -6,6 +6,7 @@ const NAV_LINKS = [
   { label: 'ツール診断', href: '/#diagnosis' },
   { label: 'ツール一覧', href: '/tools' },
   { label: '解説動画', href: '/videos' },
+  { label: 'ブログ', href: '/blog' },
 ];
 
 export default function Header() {

@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: BASE, lastModified: new Date(), changeFrequency: 'daily' as const, priority: 1.0 },
     { url: `${BASE}/tools`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.9 },
     { url: `${BASE}/videos`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.7 },
+    { url: `${BASE}/blog`, lastModified: new Date(), changeFrequency: 'daily' as const, priority: 0.8 },
     ...tools,
     ...purposePages,
   ];
