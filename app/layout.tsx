@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     siteName: 'AIGEN NAVI',
     title: 'AI生成ツールナビ | AIGEN NAVI',
     description: '3つの質問で最適なAI画像・動画生成ツールが見つかる。主要12ツールを徹底比較。',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'AIGEN NAVI - AI生成ツールナビ' }],
   },
   twitter: {
     card: 'summary_large_image',
