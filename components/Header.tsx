@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 const NAV_LINKS = [
   { label: 'ツール診断', href: '/#diagnosis' },
   { label: 'ツール一覧', href: '/tools' },
+  { label: '解説動画', href: '/videos' },
 ];
 
 export default function Header() {

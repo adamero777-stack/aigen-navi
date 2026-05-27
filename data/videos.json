@@ -1,0 +1,122 @@
+[
+  {
+    "id": "v01",
+    "title": "【完全版】Midjourneyの始め方・使い方を徹底解説",
+    "videoId": "38pRtUOybr8",
+    "category": "image",
+    "relatedToolId": "midjourney",
+    "featured": true
+  },
+  {
+    "id": "v02",
+    "title": "【初心者向け】Midjourneyの使い方パーフェクトガイド",
+    "videoId": "KZ1wLoLPfrM",
+    "category": "image",
+    "relatedToolId": "midjourney",
+    "featured": false
+  },
+  {
+    "id": "v03",
+    "title": "ChatGPT 4o画像生成 クリエイティブな活用事例50選",
+    "videoId": "J8n0RAcG-JA",
+    "category": "image",
+    "relatedToolId": "chatgpt-image",
+    "featured": true
+  },
+  {
+    "id": "v04",
+    "title": "GPT-4oの画像生成機能が凄い！解説してみた",
+    "videoId": "4y2Ul5RfpqY",
+    "category": "image",
+    "relatedToolId": "chatgpt-image",
+    "featured": false
+  },
+  {
+    "id": "v05",
+    "title": "【2025年完全ガイド】無料でStable Diffusion！使い方を徹底解説",
+    "videoId": "WNMHFhf0yUI",
+    "category": "image",
+    "relatedToolId": "stable-diffusion",
+    "featured": true
+  },
+  {
+    "id": "v06",
+    "title": "画像生成AI「FLUX」がリアル過ぎる！Midjourney超え？",
+    "videoId": "Sfnbr0X1rQg",
+    "category": "image",
+    "relatedToolId": "flux",
+    "featured": true
+  },
+  {
+    "id": "v07",
+    "title": "FLUX.1の使い方を紹介！ローカルPCで実行する方法",
+    "videoId": "cUWOFEv_y2w",
+    "category": "image",
+    "relatedToolId": "flux",
+    "featured": false
+  },
+  {
+    "id": "v08",
+    "title": "KlingAI 3.0が動画制作の常識を破壊した【新機能10選】",
+    "videoId": "SFLLwpTxD_Q",
+    "category": "video",
+    "relatedToolId": "kling",
+    "featured": true
+  },
+  {
+    "id": "v09",
+    "title": "【爆速で習得】Kling AIの使い方を完全解説",
+    "videoId": "MU8HFoxyQ6g",
+    "category": "video",
+    "relatedToolId": "kling",
+    "featured": false
+  },
+  {
+    "id": "v10",
+    "title": "【2025年版】初心者向けRunway完全ガイド",
+    "videoId": "1q0LOyUHwYA",
+    "category": "video",
+    "relatedToolId": "runway",
+    "featured": true
+  },
+  {
+    "id": "v11",
+    "title": "Runway Gen-3の使い方 完全ガイド",
+    "videoId": "66lepdjDHFA",
+    "category": "video",
+    "relatedToolId": "runway",
+    "featured": false
+  },
+  {
+    "id": "v12",
+    "title": "【無料で使える】Veo3徹底解説！Google最新動画AI",
+    "videoId": "EvB5np7BlJo",
+    "category": "video",
+    "relatedToolId": "veo",
+    "featured": true
+  },
+  {
+    "id": "v13",
+    "title": "GeminiやVeo3の使い方を紹介｜動画＋音声自動生成",
+    "videoId": "JCM6lC3oW1c",
+    "category": "video",
+    "relatedToolId": "veo",
+    "featured": false
+  },
+  {
+    "id": "v14",
+    "title": "【2026年最新】Adobe Fireflyの始め方【画像・動画】",
+    "videoId": "y95COIGReo4",
+    "category": "image",
+    "relatedToolId": "adobe-firefly",
+    "featured": false
+  },
+  {
+    "id": "v15",
+    "title": "【初心者もOK】Canva AI画像機能が便利すぎる！完全攻略",
+    "videoId": "Oce57j8gYVw",
+    "category": "image",
+    "relatedToolId": "canva-pro",
+    "featured": false
+  }
+]
