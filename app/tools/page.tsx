@@ -9,8 +9,8 @@ import toolsData from '@/data/tools.json';
 const tools = toolsData as Tool[];
 
 export const metadata = {
-  title: 'AIツール一覧 - 画像・動画生成AI全12種を徹底比較',
-  description: 'Midjourney・ChatGPT・Flux・Kling・Runway・Veoなど主要AI生成ツール12種類の料金・特徴・おすすめ用途を一覧で比較。あなたに最適なツールが見つかります。',
+  title: 'AIツール一覧 - 画像・動画・音楽生成AI全15種を徹底比較',
+  description: 'Midjourney・ChatGPT・Flux・Kling・Runway・Veo・Suno・Udioなど主要AI生成ツール15種類の料金・特徴・おすすめ用途を一覧で比較。',
   alternates: { canonical: 'https://aigen-navi.jp/tools' },
 };
 
@@ -18,6 +18,7 @@ const categories = [
   { label: '🎬 動画生成AI', filter: (t: Tool) => t.type === 'video' },
   { label: '📷 画像生成AI', filter: (t: Tool) => t.type === 'static' },
   { label: '📷🎬 画像・動画 両対応', filter: (t: Tool) => t.type === 'both' },
+  { label: '🎵 音楽生成AI', filter: (t: Tool) => t.type === 'music' },
 ];
 
 export default function ToolsListPage() {
@@ -31,7 +32,7 @@ export default function ToolsListPage() {
           <Link href="/" style={{ fontSize: 14, color: 'var(--color-text-muted)', textDecoration: 'none' }}>← トップへ戻る</Link>
           <h1 style={{ fontSize: 28, marginTop: 20, marginBottom: 8 }}>AIツール一覧</h1>
           <p style={{ color: 'var(--color-text-muted)', marginBottom: 32, lineHeight: 1.7 }}>
-            画像・動画AI生成ツールを種類別に紹介。詳細ページで使い方・料金・紹介動画もチェックできます。
+            画像・動画・音楽AI生成ツールを種類別に紹介。詳細ページで使い方・料金・紹介動画もチェックできます。
           </p>
 
           {categories.map(cat => {
