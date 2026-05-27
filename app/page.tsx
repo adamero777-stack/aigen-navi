@@ -7,8 +7,9 @@ import type { Tool } from '@/types/tool';
 import toolsData from '@/data/tools.json';
 
 export const metadata = {
-  title: 'AI生成ツールナビ | AIGEN NAVI',
-  description: '品質・コスト・速度の3軸でAI画像・動画生成ツールをリアルタイム比較。',
+  title: 'AI生成ツールナビ | 3つの質問で最適なAI画像・動画ツールが見つかる',
+  description: '品質・コスト・速度の3軸でMidjourney、ChatGPT、Flux、Kling、Runway、Veoなど主要12ツールを徹底比較。3ステップ診断であなたにぴったりのAIツールが見つかります。',
+  alternates: { canonical: 'https://aigen-navi.jp' },
 };
 
 export default function Home() {

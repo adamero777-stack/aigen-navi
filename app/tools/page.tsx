@@ -9,8 +9,9 @@ import toolsData from '@/data/tools.json';
 const tools = toolsData as Tool[];
 
 export const metadata = {
-  title: 'AIツール一覧 | AIGEN NAVI',
-  description: '画像・動画AI生成ツール全12種類の一覧。料金、特徴、おすすめ用途を一目で比較。',
+  title: 'AIツール一覧 - 画像・動画生成AI全12種を徹底比較',
+  description: 'Midjourney・ChatGPT・Flux・Kling・Runway・Veoなど主要AI生成ツール12種類の料金・特徴・おすすめ用途を一覧で比較。あなたに最適なツールが見つかります。',
+  alternates: { canonical: 'https://aigen-navi.jp/tools' },
 };
 
 const categories = [
