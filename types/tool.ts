@@ -1,7 +1,7 @@
 export interface Tool {
   id: string;
   name: string;
-  type: 'static' | 'video' | 'both';
+  type: 'static' | 'video' | 'both' | 'music';
   category: 'major' | 'affiliate';
   qualityScore: number;
   costScore: number;

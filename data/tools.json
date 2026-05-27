@@ -580,5 +580,158 @@
     ],
     "detailedPricing": "$10/月〜、プラン詳細は公式サイト参照",
     "comparison": "Midjourneyの体験を低コストで再現。本家ほどの品質はないがコスパ重視なら十分な選択肢。"
+  },
+  {
+    "id": "suno",
+    "name": "Suno AI",
+    "type": "music",
+    "category": "major",
+    "qualityScore": 9,
+    "costScore": 8,
+    "speedScore": 9,
+    "monthlyPrice": "無料〜$24/月",
+    "imageQuality": "高品質な楽曲",
+    "generationTime": "10〜30秒",
+    "features": [
+      "テキストから楽曲生成",
+      "ボーカル付き対応",
+      "多ジャンル対応",
+      "日本語歌詞OK"
+    ],
+    "bestFor": "楽曲制作・BGM・オリジナルソング",
+    "description": "テキスト入力だけでボーカル付き楽曲を自動生成。最も人気のAI音楽ツール。",
+    "websiteUrl": "https://suno.com",
+    "affiliateUrl": "",
+    "freeTrialAvailable": true,
+    "supportLevel": "community",
+    "alternativeTools": [
+      "udio",
+      "soundraw"
+    ],
+    "youtubeVideos": [
+      "dKFOE_aeJkI",
+      "sEXF7hTGOCM",
+      "8g3tekCaOnI"
+    ],
+    "pros": [
+      "テキストだけで完全な楽曲を生成",
+      "無料で月10曲まで作成可能",
+      "日本語歌詞にも対応",
+      "ポップス・ロック・EDMなど多ジャンル"
+    ],
+    "cons": [
+      "商用利用はProプラン以上",
+      "生成曲の長さに制限あり",
+      "細かい音楽理論的な制御が難しい"
+    ],
+    "recommendedFor": [
+      "BGMが欲しい動画クリエイター",
+      "オリジナル楽曲を作りたい人",
+      "SNS・YouTube用の音楽素材が必要な人"
+    ],
+    "detailedPricing": "Free（月10曲）、Pro $10/月（月500曲・商用OK）、Premier $24/月（月2000曲）",
+    "comparison": "Udioと比べポップス系に強く操作が簡単。Soundrawと比べボーカル付き楽曲が作れる点が優位。"
+  },
+  {
+    "id": "udio",
+    "name": "Udio",
+    "type": "music",
+    "category": "major",
+    "qualityScore": 9.5,
+    "costScore": 7,
+    "speedScore": 8,
+    "monthlyPrice": "無料〜$24/月",
+    "imageQuality": "プロレベルの音質",
+    "generationTime": "15〜45秒",
+    "features": [
+      "高品質音楽生成",
+      "多ジャンル対応",
+      "リミックス機能",
+      "楽曲拡張"
+    ],
+    "bestFor": "プロ品質楽曲・CM音楽",
+    "description": "プロレベルの楽曲をAIで生成。音質と表現力でトップクラスのAI音楽ツール。",
+    "websiteUrl": "https://www.udio.com",
+    "affiliateUrl": "",
+    "freeTrialAvailable": true,
+    "supportLevel": "standard",
+    "alternativeTools": [
+      "suno",
+      "soundraw"
+    ],
+    "youtubeVideos": [
+      "v7RkaE_3Uvs",
+      "5bGnMXfyPVY",
+      "Kho7LjOEfXw"
+    ],
+    "pros": [
+      "AI音楽ツール中最高クラスの音質",
+      "多様なジャンルに対応",
+      "リミックス・拡張機能が豊富",
+      "プロの音楽制作にも使えるレベル"
+    ],
+    "cons": [
+      "無料プランの生成数が限定的",
+      "UIが英語のみ",
+      "操作の学習コストがやや高い"
+    ],
+    "recommendedFor": [
+      "音質重視のクリエイター",
+      "CM・広告用BGM制作者",
+      "プロの音楽制作者"
+    ],
+    "detailedPricing": "Free（月10曲）、Standard $10/月（月1200曲）、Pro $24/月（月4800曲）",
+    "comparison": "Sunoと比べ音質が高く制御も細かいが操作は難しめ。プロ向け。"
+  },
+  {
+    "id": "soundraw",
+    "name": "Soundraw",
+    "type": "music",
+    "category": "major",
+    "qualityScore": 7.5,
+    "costScore": 6,
+    "speedScore": 10,
+    "monthlyPrice": "$16.99〜/月",
+    "imageQuality": "商用BGMに最適",
+    "generationTime": "5〜10秒",
+    "features": [
+      "BGM特化",
+      "商用利用OK",
+      "テンポ・長さカスタマイズ",
+      "ループ対応"
+    ],
+    "bestFor": "動画BGM・商用BGM",
+    "description": "BGM制作に特化したAI音楽ツール。テンポ・ジャンル・長さを指定して即生成。",
+    "websiteUrl": "https://soundraw.io",
+    "affiliateUrl": "",
+    "freeTrialAvailable": false,
+    "supportLevel": "standard",
+    "alternativeTools": [
+      "suno",
+      "udio"
+    ],
+    "youtubeVideos": [
+      "IFfPaLTbyPM",
+      "lG0RqjyAkwQ",
+      "uS0MZ7FQ_rU"
+    ],
+    "pros": [
+      "全プランで商用利用OK",
+      "BGMに特化した高品質な出力",
+      "テンポ・長さ・楽器の細かいカスタマイズ",
+      "YouTube動画との相性抜群"
+    ],
+    "cons": [
+      "ボーカル付き楽曲は生成不可",
+      "無料プランなし",
+      "BGM以外の用途には不向き"
+    ],
+    "recommendedFor": [
+      "YouTube動画のBGMが欲しい人",
+      "商用映像制作者",
+      "ポッドキャスト・プレゼン用BGM"
+    ],
+    "detailedPricing": "Creator $16.99/月（無制限生成・個人商用OK）、Business $49.99/月（企業商用OK）",
+    "comparison": "SunoやUdioと比べBGM品質が高い。ボーカルは不可だが映像用BGMなら最適。"
   }
 ]

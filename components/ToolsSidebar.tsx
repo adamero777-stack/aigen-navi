@@ -8,6 +8,7 @@ const categories = [
   { label: '🎬 動画', filter: (t: Tool) => t.type === 'video' },
   { label: '📷 画像', filter: (t: Tool) => t.type === 'static' },
   { label: '📷🎬 どちらも', filter: (t: Tool) => t.type === 'both' },
+  { label: '🎵 音楽', filter: (t: Tool) => t.type === 'music' },
 ];
 
 export default function ToolsSidebar() {

@@ -118,5 +118,37 @@
     "category": "image",
     "relatedToolId": "canva-pro",
     "featured": false
+  },
+  {
+    "id": "v16",
+    "title": "【完全版】Suno AIの使い方｜テキストだけで作曲する方法",
+    "videoId": "dKFOE_aeJkI",
+    "category": "music",
+    "relatedToolId": "suno",
+    "featured": true
+  },
+  {
+    "id": "v17",
+    "title": "Suno AI vs Udio 徹底比較！どっちが高品質？",
+    "videoId": "sEXF7hTGOCM",
+    "category": "music",
+    "relatedToolId": "suno",
+    "featured": false
+  },
+  {
+    "id": "v18",
+    "title": "【2025年版】Udioの使い方完全ガイド｜プロ品質AI音楽",
+    "videoId": "v7RkaE_3Uvs",
+    "category": "music",
+    "relatedToolId": "udio",
+    "featured": true
+  },
+  {
+    "id": "v19",
+    "title": "Soundrawで動画BGMを一瞬で作る方法",
+    "videoId": "IFfPaLTbyPM",
+    "category": "music",
+    "relatedToolId": "soundraw",
+    "featured": false
   }
 ]

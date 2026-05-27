@@ -1,4 +1,4 @@
-export type Purpose = 'sns' | 'ad' | 'youtube' | 'blog' | 'business' | 'hobby' | 'short' | 'pro-video' | 'education';
+export type Purpose = 'sns' | 'ad' | 'youtube' | 'blog' | 'business' | 'hobby' | 'short' | 'pro-video' | 'education' | 'music';
 export type Priority = 'ease' | 'cost' | 'quality';
 
 export const TOOL_TAGS: Record<string, { purposes: Purpose[]; priority: Record<Priority, number> }> = {
@@ -14,6 +14,9 @@ export const TOOL_TAGS: Record<string, { purposes: Purpose[]; priority: Record<P
   envato:             { purposes: ['ad','business','blog','sns','hobby'], priority: { quality: 8, cost: 7, ease: 9 } },
   'getimg-ai':        { purposes: ['sns','ad','blog','hobby','short'],    priority: { quality: 8, cost: 9, ease: 9 } },
   pixeldojo:          { purposes: ['sns','hobby','blog','short'],         priority: { quality: 8, cost: 8, ease: 8 } },
+  suno:               { purposes: ['music','youtube','sns','hobby'],       priority: { quality: 9, cost: 8, ease: 9 } },
+  udio:               { purposes: ['music','pro-video','ad','youtube'],    priority: { quality: 10, cost: 7, ease: 7 } },
+  soundraw:           { purposes: ['music','youtube','pro-video','business'], priority: { quality: 7, cost: 6, ease: 10 } },
 };
 
 export const PURPOSE_LABELS: Record<Purpose, { icon: string; title: string; description: string }> = {
@@ -26,4 +29,5 @@ export const PURPOSE_LABELS: Record<Purpose, { icon: string; title: string; desc
   short:       { icon: '📲', title: 'ショート動画用', description: 'TikTok、Reels、Shorts。短尺高密度コンテンツ向け' },
   'pro-video': { icon: '🎬', title: 'プロ映像・CM用', description: '商用映像制作。最高品質と細かい制御が必須なシーン' },
   education:   { icon: '🎓', title: '教育・解説用', description: 'チュートリアル、研修教材。理解しやすい構成を作るツール' },
+  music:       { icon: '🎵', title: '音楽・BGM制作用', description: 'BGM、楽曲、効果音。動画やコンテンツ用の音楽をAIで生成' },
 };

@@ -15,6 +15,7 @@ const CATEGORIES = [
   { key: 'all', label: 'すべて' },
   { key: 'image', label: '📷 画像AI' },
   { key: 'video', label: '🎬 動画AI' },
+  { key: 'music', label: '🎵 音楽AI' },
 ];
 
 const TOOL_NAMES: Record<string, string> = {
@@ -30,6 +31,9 @@ const TOOL_NAMES: Record<string, string> = {
   envato: 'Envato Elements',
   'getimg-ai': 'Getimg.ai',
   pixeldojo: 'Pixel Dojo',
+  suno: 'Suno AI',
+  udio: 'Udio',
+  soundraw: 'Soundraw',
 };
 
 export default function VideoGrid({ videos }: { videos: Video[] }) {
