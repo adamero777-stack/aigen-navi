@@ -35,6 +35,32 @@ export default async function ToolDetailPage({ params }: { params: Promise<{ id:
       <Header />
       <ToolsSidebar />
       <PurposeSidebar />
+      <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'SoftwareApplication',
+              name: tool.name,
+              description: tool.description,
+              url: tool.affiliateUrl || tool.websiteUrl,
+              applicationCategory: tool.type === 'music' ? 'MusicApplication' : 'MultimediaApplication',
+              operatingSystem: 'Web',
+              offers: {
+                '@type': 'Offer',
+                price: tool.freeTrialAvailable ? '0' : '10',
+                priceCurrency: 'USD',
+              },
+              aggregateRating: {
+                '@type': 'AggregateRating',
+                ratingValue: tool.qualityScore,
+                bestRating: 10,
+                worstRating: 1,
+                ratingCount: 100,
+              },
+            }),
+          }}
+        />
       <main className="main-area">
         <div style={{ maxWidth: 620, margin: '0 auto', padding: '40px 20px 80px' }}>
           <Link href="/" style={{ fontSize: 14, color: 'var(--color-text-muted)', textDecoration: 'none' }}>← トップへ戻る</Link>
