@@ -19,8 +19,9 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const tool = tools.find((t) => t.id === id);
   if (!tool) return { title: 'Not Found | AIGEN NAVI' };
   return {
-    title: `${tool.name}の特徴・使い方 | AIGEN NAVI`,
+    title: `${tool.name}の特徴・料金・使い方 | AIGEN NAVI`,
     description: tool.description || `${tool.name}の詳細情報、料金、特徴をまとめています。`,
+    alternates: { canonical: `https://aigen-navi.jp/tools/${id}` },
   };
 }
 
@@ -137,7 +138,42 @@ export default async function ToolDetailPage({ params }: { params: Promise<{ id:
             <h2 style={{ fontSize: 18, marginBottom: 12 }}>{tool.name}の使い方・紹介動画</h2>
             <VideoGallery videos={tool.youtubeVideos || []} toolName={tool.name} />
           </section>
+
+          {tool.alternativeTools && tool.alternativeTools.length > 0 && (
+            <section style={{ marginBottom: 32 }}>
+              <h2 style={{ fontSize: 18, marginBottom: 12 }}>関連ツール</h2>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                {tool.alternativeTools.map((altId: string) => {
+                  const alt = tools.find((t: Tool) => t.id === altId);
+                  if (!alt) return null;
+                  return (
+                    <Link key={altId} href={`/tools/${altId}`} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 16px', border: '1px solid #e5e7eb', borderRadius: 8, textDecoration: 'none', color: 'inherit', fontSize: 14 }}>
+                      <span style={{ fontWeight: 600 }}>{alt.name}</span>
+                      <span style={{ fontSize: 12, color: '#999' }}>{alt.monthlyPrice} →</span>
+                    </Link>
+                  );
+                })}
+              </div>
+            </section>
+          )}
+
+          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 40 }}>
+            <Link href="/tools" style={{ padding: '10px 20px', border: '1px solid #e5e7eb', borderRadius: 8, textDecoration: 'none', color: '#333', fontSize: 13, fontWeight: 600 }}>📋 ツール一覧</Link>
+            <Link href="/#diagnosis" style={{ padding: '10px 20px', border: '1px solid #e5e7eb', borderRadius: 8, textDecoration: 'none', color: '#333', fontSize: 13, fontWeight: 600 }}>🔍 診断する</Link>
+            <Link href="/videos" style={{ padding: '10px 20px', border: '1px solid #e5e7eb', borderRadius: 8, textDecoration: 'none', color: '#333', fontSize: 13, fontWeight: 600 }}>🎬 解説動画</Link>
+            <Link href="/blog" style={{ padding: '10px 20px', border: '1px solid #e5e7eb', borderRadius: 8, textDecoration: 'none', color: '#333', fontSize: 13, fontWeight: 600 }}>📝 ブログ</Link>
+          </div>
         </div>
+        <footer style={{ borderTop: '1px solid var(--color-border)', padding: '32px 20px', textAlign: 'center' }}>
+          <div style={{ maxWidth: 620, margin: '0 auto', display: 'flex', justifyContent: 'center', gap: 24, flexWrap: 'wrap', marginBottom: 12 }}>
+            <Link href="/" style={{ fontSize: 12, color: '#999', textDecoration: 'none' }}>トップ</Link>
+            <Link href="/tools" style={{ fontSize: 12, color: '#999', textDecoration: 'none' }}>ツール一覧</Link>
+            <Link href="/videos" style={{ fontSize: 12, color: '#999', textDecoration: 'none' }}>解説動画</Link>
+            <Link href="/blog" style={{ fontSize: 12, color: '#999', textDecoration: 'none' }}>ブログ</Link>
+            <Link href="/purpose/music" style={{ fontSize: 12, color: '#999', textDecoration: 'none' }}>音楽AI</Link>
+          </div>
+          <p style={{ fontSize: 12, color: '#bbb', margin: 0 }}>© 2026 AIGEN NAVI — 料金情報は各公式サイトでご確認ください</p>
+        </footer>
       </main>
       <BackToTop />
     </>

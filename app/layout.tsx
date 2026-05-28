@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     default: 'AI生成ツールナビ | AIGEN NAVI - 最適なAI画像・動画生成ツールが見つかる',
     template: '%s | AIGEN NAVI',
   },
-  description: '3つの質問であなたにぴったりのAI画像・動画生成ツールが見つかる。Midjourney、ChatGPT、Flux、Kling、Runway、Veoなど主要12ツールを品質・コスト・速度で徹底比較。',
+  description: '3つの質問であなたにぴったりのAI画像・動画・音楽生成ツールが見つかる。Midjourney、ChatGPT、Flux、Kling、Runway、Veoなど主要12ツールを品質・コスト・速度で徹底比較。',
   keywords: ['AI画像生成', 'AI動画生成', 'AIツール比較', 'Midjourney', 'ChatGPT画像生成', 'Stable Diffusion', 'Flux', 'Kling AI', 'Runway', 'Google Veo', 'Adobe Firefly', 'Canva'],
   openGraph: {
     type: 'website',
@@ -15,13 +15,13 @@ export const metadata: Metadata = {
     url: 'https://aigen-navi.jp',
     siteName: 'AIGEN NAVI',
     title: 'AI生成ツールナビ | AIGEN NAVI',
-    description: '3つの質問で最適なAI画像・動画生成ツールが見つかる。主要12ツールを徹底比較。',
+    description: '3つの質問で最適なAI画像・動画生成ツールが見つかる。主要15ツールを徹底比較。',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'AIGEN NAVI - AI生成ツールナビ' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'AI生成ツールナビ | AIGEN NAVI',
-    description: '3つの質問で最適なAI画像・動画生成ツールが見つかる。主要12ツールを徹底比較。',
+    description: '3つの質問で最適なAI画像・動画生成ツールが見つかる。主要15ツールを徹底比較。',
   },
   alternates: {
     canonical: 'https://aigen-navi.jp',

@@ -5,8 +5,8 @@ import PurposeSidebar from '@/components/PurposeSidebar';
 import BlogList from './BlogList';
 
 export const metadata = {
-  title: 'ブログ - AI画像・動画生成の最新情報',
-  description: 'AI画像・動画生成ツールの使い方、比較、最新ニュースをお届けするブログ。Midjourney、ChatGPT、Flux、Kling、Runwayなどの活用術。',
+  title: 'ブログ - AI画像・動画・音楽生成の最新情報',
+  description: 'AI画像・動画・音楽生成ツールの使い方、比較、最新ニュースをお届けするブログ。Midjourney、ChatGPT、Flux、Kling、Runwayなどの活用術。',
   alternates: { canonical: 'https://aigen-navi.jp/blog' },
 };
 
