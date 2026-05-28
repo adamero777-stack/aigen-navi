@@ -1,5 +1,15 @@
 import type { Metadata } from 'next';
+import { Noto_Sans_JP } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
+
+const notoSansJP = Noto_Sans_JP({
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  preload: false,
+  variable: '--font-noto-sans-jp',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://aigen-navi.jp'),
@@ -58,28 +68,28 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ja">
+    <html lang="ja" className={notoSansJP.variable}>
       <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XLPL7Z5M2V" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-XLPL7Z5M2V');
-            `,
-          }}
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-XLPL7Z5M2V"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XLPL7Z5M2V');
+          `}
+        </Script>
+        {children}
+      </body>
     </html>
   );
 }

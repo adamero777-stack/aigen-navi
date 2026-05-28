@@ -16,7 +16,7 @@
   --color-accent-glow: rgba(37,99,235,0.15);
   --color-card-bg: #c9e7ff;
   --color-btn-bg: #c9e7ff;
-  --font-body: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+  --font-body: var(--font-noto-sans-jp), 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
