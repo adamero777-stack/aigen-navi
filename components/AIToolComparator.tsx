@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Tool } from '@/types/tool';
 
 type MediaType = 'static' | 'video' | 'both' | 'music';
@@ -227,7 +228,7 @@ export default function AIToolComparator({ tools }: Props) {
 
                     {/* ロゴ */}
                     {logoUrl && (
-                      <img
+                      <Image
                         src={logoUrl}
                         alt={r.tool.name}
                         width={36}

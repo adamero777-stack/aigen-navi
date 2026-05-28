@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+import logoImg from '@/public/logo.png';
 
 const NAV_LINKS = [
   { label: 'ツール診断', href: '/#diagnosis' },
@@ -39,10 +41,11 @@ export default function Header() {
       }}>
         {/* 左：ロゴ */}
         <a href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
-          <img
-            src="/logo.png"
+          <Image
+            src={logoImg}
             alt="AIGEN NAVI"
-            style={{ height: 36, objectFit: 'contain' }}
+            priority
+            style={{ height: 36, width: 'auto', objectFit: 'contain' }}
           />
         </a>
 

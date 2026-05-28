@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const purposes = [
   { icon: '📱', label: 'SNS投稿用', href: '/purpose/sns' },
@@ -43,9 +44,12 @@ export default function PurposeSidebar() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
           {popularVideos.map(v => (
             <Link key={v.id} href="/videos" style={{ display: 'block', borderRadius: 6, overflow: 'hidden', textDecoration: 'none' }}>
-              <img
+              <Image
                 src={`https://img.youtube.com/vi/${v.id}/mqdefault.jpg`}
                 alt={v.title}
+                width={320}
+                height={180}
+                loading="lazy"
                 style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 6 }}
               />
               <span style={{ fontSize: 11, color: '#333', lineHeight: 1.4, display: 'block', marginTop: 4 }}>{v.title}</span>
