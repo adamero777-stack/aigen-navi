@@ -4,8 +4,8 @@ import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 import type { Tool } from '@/types/tool';
 
-type MediaType = 'static' | 'video' | 'both';
-type Purpose = 'sns' | 'ad' | 'youtube' | 'blog' | 'business' | 'hobby' | 'short' | 'pro-video' | 'education';
+type MediaType = 'static' | 'video' | 'both' | 'music';
+type Purpose = 'sns' | 'ad' | 'youtube' | 'blog' | 'business' | 'hobby' | 'short' | 'pro-video' | 'education' | 'music';
 type Priority = 'ease' | 'cost' | 'quality';
 
 interface Props { tools: Tool[]; }
@@ -19,6 +19,9 @@ const LOGO_MAP: Record<string, string> = {
   'adobe-firefly':    'https://logo.clearbit.com/adobe.com',
   genmo:              'https://logo.clearbit.com/genmo.ai',
   'canva-pro':        'https://logo.clearbit.com/canva.com',
+  suno:               'https://logo.clearbit.com/suno.com',
+  udio:               'https://logo.clearbit.com/udio.com',
+  soundraw:           'https://logo.clearbit.com/soundraw.io',
 };
 
 const PURPOSES_IMAGE = [
@@ -35,6 +38,13 @@ const PURPOSES_VIDEO = [
   { key: 'pro-video' as Purpose, icon: '🎬', label: 'プロ映像・CM', desc: '商用映像制作' },
   { key: 'education' as Purpose, icon: '🎓', label: '教育・解説', desc: 'チュートリアル、研修用' },
   { key: 'hobby' as Purpose, icon: '🎮', label: '趣味・実験', desc: '個人プロジェクト' },
+];
+
+const PURPOSES_MUSIC = [
+  { key: 'music' as Purpose, icon: '🎵', label: 'BGM\u30fb\u697d\u66f2\u5236\u4f5c', desc: '\u52d5\u753b\u30fbSNS\u7528\u306eBGM\u3001\u30aa\u30ea\u30b8\u30ca\u30eb\u697d\u66f2' },
+  { key: 'youtube' as Purpose, icon: '📺', label: 'YouTube\u7528BGM', desc: '\u52d5\u753b\u306e\u30d0\u30c3\u30af\u30b0\u30e9\u30a6\u30f3\u30c9\u30df\u30e5\u30fc\u30b8\u30c3\u30af' },
+  { key: 'ad' as Purpose, icon: '🎯', label: 'CM\u30fb\u5e83\u544a\u7528', desc: '\u5546\u7528\u6620\u50cf\u306eBGM\u5236\u4f5c' },
+  { key: 'hobby' as Purpose, icon: '🎨', label: '\u8da3\u5473\u30fb\u500b\u4eba\u5236\u4f5c', desc: '\u30aa\u30ea\u30b8\u30ca\u30eb\u30bd\u30f3\u30b0\u4f5c\u308a' },
 ];
 
 const PRIORITIES = [
@@ -56,6 +66,9 @@ const TOOL_TAGS: Record<string, { purposes: Purpose[]; priority: Record<Priority
   envato:             { purposes: ['ad','business','blog','sns','hobby'], priority: { quality: 8, cost: 7, ease: 9 } },
   'getimg-ai':        { purposes: ['sns','ad','blog','hobby','short'],    priority: { quality: 8, cost: 9, ease: 9 } },
   pixeldojo:          { purposes: ['sns','hobby','blog','short'],         priority: { quality: 8, cost: 8, ease: 8 } },
+  suno:               { purposes: ['music','youtube','sns','hobby'],       priority: { quality: 9, cost: 8, ease: 9 } },
+  udio:               { purposes: ['music','pro-video','ad','youtube'],    priority: { quality: 10, cost: 7, ease: 7 } },
+  soundraw:           { purposes: ['music','youtube','pro-video','business'], priority: { quality: 7, cost: 6, ease: 10 } },
 };
 
 const WHY_TEXT: Record<string, Record<string, string>> = {
@@ -71,6 +84,9 @@ const WHY_TEXT: Record<string, Record<string, string>> = {
   envato:             { ease: '素材＋AI生成のハイブリッド。すぐ使える', cost: '月$16.50で数百万素材使い放題', quality: 'プロ素材＋AIで安定の高品質' },
   'getimg-ai':        { ease: 'FLUX/GPT Image等を1画面で。無料枠あり', cost: '無料100クレジット/月。基本$12〜', quality: '主要モデル統合で最先端の品質' },
   pixeldojo:          { ease: 'Midjourney風UIで直感的', cost: '$10〜と低コスト', quality: 'Midjourneyの体験を低コストで再現' },
+  suno:               { ease: 'テキスト入力だけでボーカル付き楽曲を自動生成', cost: '無料で月10曲。Pro $10/月で500曲', quality: '1億人が使う圧倒的人気。多ジャンル対応' },
+  udio:               { ease: 'リミックス・拡張機能で高度な編集も可能', cost: '無料枠あり。Standard $10/月', quality: 'AI音楽ツール中最高クラスの音質。プロ品質' },
+  soundraw:           { ease: 'テンポ・長さ指定で数秒でBGM生成', cost: '$16.99/月で無制限生成', quality: '商用BGMに特化。全プラン商用OK' },
 };
 
 export default function AIToolComparator({ tools }: Props) {
@@ -82,7 +98,7 @@ export default function AIToolComparator({ tools }: Props) {
   const results = useMemo(() => {
     if (!media || !purpose || !priority) return [];
     return tools
-      .filter(t => media === 'both' || t.type === media)
+      .filter(t => media === 'both' || t.type === media || (media === 'music' && t.type === 'music'))
       .map(t => {
         const tags = TOOL_TAGS[t.id];
         if (!tags) return { tool: t, score: 0 };
@@ -105,7 +121,7 @@ export default function AIToolComparator({ tools }: Props) {
     else if (step === 1) { setMedia(null); setStep(0); }
   };
 
-  const purposes = media === 'video' ? PURPOSES_VIDEO : media === 'static' ? PURPOSES_IMAGE : [...PURPOSES_IMAGE, ...PURPOSES_VIDEO];
+  const purposes = media === 'music' ? PURPOSES_MUSIC : media === 'video' ? PURPOSES_VIDEO : media === 'static' ? PURPOSES_IMAGE : [...PURPOSES_IMAGE, ...PURPOSES_VIDEO, ...PURPOSES_MUSIC];
 
   return (
     <div style={{ position: 'relative', zIndex: 1 }}>
@@ -131,11 +147,12 @@ export default function AIToolComparator({ tools }: Props) {
       {/* STEP 0 */}
       {step === 0 && (
         <StepWrap title="何を作りたい？" sub="Step 1 / 3">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 12 }}>
             {([
               { key: 'static' as MediaType, icon: '🖼️', label: '画像' },
               { key: 'video' as MediaType, icon: '🎬', label: '動画' },
-              { key: 'both' as MediaType, icon: '🎨', label: 'どちらも' },
+              { key: 'music' as MediaType, icon: '🎵', label: '音楽' },
+              { key: 'both' as MediaType, icon: '🎨', label: '全て見る' },
             ]).map((m, i) => (
               <div key={m.key} className={`select-card anim-scale-in d${i+1}`} onClick={() => selectMedia(m.key)}>
                 <div style={{ fontSize: 32, marginBottom: 10 }}>{m.icon}</div>
@@ -180,7 +197,7 @@ export default function AIToolComparator({ tools }: Props) {
       {step === 3 && results.length > 0 && (
         <div className="anim-fade-up">
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, justifyContent: 'center', marginBottom: 28 }}>
-            <span className="tag tag-blue">{media === 'static' ? '🖼️ 画像' : media === 'video' ? '🎬 動画' : '🎨 両方'}</span>
+            <span className="tag tag-blue">{media === 'static' ? '🖼️ 画像' : media === 'video' ? '🎬 動画' : media === 'music' ? '🎵 音楽' : '🎨 全て'}</span>
             <span className="tag tag-blue">{[...PURPOSES_IMAGE,...PURPOSES_VIDEO].find(p => p.key === purpose)?.label}</span>
             <span className="tag tag-blue">{PRIORITIES.find(p => p.key === priority)?.label}</span>
           </div>
@@ -233,10 +250,10 @@ export default function AIToolComparator({ tools }: Props) {
                         <span style={{
                           fontSize: 10, fontWeight: 600, letterSpacing: '0.06em', textTransform: 'uppercase' as const,
                           padding: '3px 8px', borderRadius: 999,
-                          background: r.tool.type === 'static' ? 'rgba(37,99,235,0.08)' : 'rgba(124,58,237,0.08)',
-                          color: r.tool.type === 'static' ? '#2563eb' : '#7c3aed',
+                          background: r.tool.type === 'static' ? 'rgba(37,99,235,0.08)' : r.tool.type === 'music' ? 'rgba(16,185,129,0.08)' : 'rgba(124,58,237,0.08)',
+                          color: r.tool.type === 'static' ? '#2563eb' : r.tool.type === 'music' ? '#10b981' : '#7c3aed',
                         }}>
-                          {r.tool.type === 'static' ? 'Image' : 'Video'}
+                          {r.tool.type === 'static' ? 'Image' : r.tool.type === 'music' ? 'Music' : 'Video'}
                         </span>
                       </div>
                       <span style={{ fontSize: 13, color: 'var(--color-text-muted)' }}>{r.tool.monthlyPrice}</span>
