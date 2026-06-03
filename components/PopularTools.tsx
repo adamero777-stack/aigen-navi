@@ -48,15 +48,15 @@ export default function PopularTools({ tools }: { tools: Tool[] }) {
               <p style={{ fontSize: 12, color: 'var(--color-text-muted)', margin: '0 0 10px', paddingLeft: 34 }}>{tagline}</p>
               <div style={{ display: 'flex', gap: 8, paddingLeft: 34, flexWrap: 'wrap' }}>
                 <Link href={'/tools/' + tool.id} style={{
-                  fontSize: 11, fontWeight: 600, color: 'var(--color-accent)',
-                  textDecoration: 'none', padding: '4px 12px', borderRadius: 6,
-                  border: '1px solid var(--color-accent)',
+                  fontSize: 12, fontWeight: 700, color: '#1a1a1a',
+                  textDecoration: 'none', padding: '6px 16px', borderRadius: 20,
+                  background: '#EAB308',
                 }}>詳しく見る</Link>
                 {ctaUrl && (
                   <a href={ctaUrl} target="_blank" rel="noopener noreferrer" style={{
-                    fontSize: 11, fontWeight: 600, color: '#fff',
-                    textDecoration: 'none', padding: '4px 12px', borderRadius: 6,
-                    background: 'var(--color-accent)',
+                    fontSize: 12, fontWeight: 700, color: 'var(--color-accent)',
+                    textDecoration: 'none', padding: '6px 16px', borderRadius: 20,
+                    border: '2px solid var(--color-accent)', background: '#fff',
                   }}>公式サイト →</a>
                 )}
               </div>
