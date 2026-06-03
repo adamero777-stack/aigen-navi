@@ -12,10 +12,14 @@ export const metadata = {
 
 async function fetchNoteArticles() {
   try {
-    const res = await fetch('https://note.com/aigennavi/rss', {
+    const res = await fetch('https://note.com/aigennavi/rss/', {
       next: { revalidate: 3600 },
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (compatible; AIGEN-NAVI/1.0; +https://aigen-navi.jp)',
+        'Accept': 'application/rss+xml, application/xml, text/xml, */*',
+      },
     });
-    if (!res.ok) return [];
+    if (!res.ok) { console.error('[blog] RSS fetch failed:', res.status, res.statusText); return []; }
     const xml = await res.text();
     const items: Array<{title:string;link:string;description:string;pubDate:string;thumbnail:string}> = [];
     const itemRegex = /<item>([\\s\\S]*?)<\/item>/g;
@@ -26,7 +30,7 @@ async function fetchNoteArticles() {
         const m = block.match(new RegExp(`<${tag}[^>]*><!\\[CDATA\\[([\\s\\S]*?)\\]\\]><\\/${tag}>|<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`));
         return m ? (m[1] || m[2] || '').trim() : '';
       };
-      const encMatch = block.match(/enclosure[^>]*url="([^"]+)"/);
+      const encMatch = block.match(/media:thumbnail[^>]*url="([^"]+)"/);
       items.push({
         title: get('title'),
         link: get('link'),
