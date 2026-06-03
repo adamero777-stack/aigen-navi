@@ -20,7 +20,7 @@ const TYPE_META: Record<string, { label: string; color: string }> = {
 export default function PopularTools({ tools }: { tools: Tool[] }) {
   const popular = TOP5.map(id => tools.find(t => t.id === id)).filter(Boolean) as Tool[];
   return (
-    <section style={{ margin: '0 auto 48px', padding: '0 20px', maxWidth: 700 }}>
+    <section style={{ margin: '0 auto 48px', padding: '0 20px', maxWidth: 600 }}>
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 20, color: 'var(--color-text)' }}>人気のAI生成ツール</h2>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, justifyContent: 'center' }}>
         {popular.map((tool, i) => {
