@@ -26,8 +26,8 @@ export default function Home() {
         <div id="diagnosis" style={{ maxWidth: 620, margin: '0 auto', padding: '40px 20px 80px' }}>
           <AIToolComparator tools={tools} />
         </div>
+        <PopularTools tools={tools} />
         <div style={{ maxWidth: 620, margin: '0 auto', padding: '0 20px 40px' }}>
-          <PopularTools tools={tools} />
           <LatestArticles />
           <TrustBar />
         </div>
