@@ -18,7 +18,7 @@ async function fetchNoteArticles() {
     if (!res.ok) { console.error('[blog] RSS fetch failed:', res.status, res.statusText); return []; }
     const xml = await res.text();
     const items: Array<{title:string;link:string;description:string;pubDate:string;thumbnail:string}> = [];
-    const itemRegex = /<item>([\\s\\S]*?)<\/item>/g;
+    const itemRegex = /<item>([\s\S]*?)<\/item>/g;
     let match;
     while ((match = itemRegex.exec(xml)) !== null) {
       const block = match[1];
