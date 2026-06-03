@@ -10,15 +10,11 @@ export const metadata = {
   alternates: { canonical: 'https://aigen-navi.jp/blog' },
 };
 
+export const dynamic = 'force-dynamic';
+
 async function fetchNoteArticles() {
   try {
-    const res = await fetch('https://note.com/aigennavi/rss/', {
-      next: { revalidate: 3600 },
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (compatible; AIGEN-NAVI/1.0; +https://aigen-navi.jp)',
-        'Accept': 'application/rss+xml, application/xml, text/xml, */*',
-      },
-    });
+    const res = await fetch('https://aigen-navi.jp/api/rss', { cache: 'no-store' });
     if (!res.ok) { console.error('[blog] RSS fetch failed:', res.status, res.statusText); return []; }
     const xml = await res.text();
     const items: Array<{title:string;link:string;description:string;pubDate:string;thumbnail:string}> = [];
