@@ -148,7 +148,7 @@ export default function AIToolComparator({ tools }: Props) {
       {/* STEP 0 */}
       {step === 0 && (
         <StepWrap title="何を作りたい？" sub="Step 1 / 3">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 12 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12 }}>
             {([
               { key: 'static' as MediaType, icon: '🖼️', label: '画像' },
               { key: 'video' as MediaType, icon: '🎬', label: '動画' },
