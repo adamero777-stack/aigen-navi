@@ -26,13 +26,12 @@ async function fetchNoteArticles() {
         const m = block.match(new RegExp(`<${tag}[^>]*><!\\[CDATA\\[([\\s\\S]*?)\\]\\]><\\/${tag}>|<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`));
         return m ? (m[1] || m[2] || '').trim() : '';
       };
-      const encMatch = block.match(/media:thumbnail[^>]*url="([^"]+)"/);
-      items.push({
+            items.push({
         title: get('title'),
         link: get('link'),
         description: get('description').replace(/<[^>]*>/g, '').slice(0, 120),
         pubDate: get('pubDate'),
-        thumbnail: encMatch ? encMatch[1] : '',
+        thumbnail: get('media:thumbnail') || '',
       });
     }
     return items;
