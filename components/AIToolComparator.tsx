@@ -296,7 +296,7 @@ export default function AIToolComparator({ tools }: Props) {
                         <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                       </a>
                     )}
-                    <Link href={`/tools/${r.tool.id}`} className="btn-accent" style={{ background: '#facc15', color: '#000' }}>
+                    <Link href={`/tools/${r.tool.id}`} className="btn-accent" style={{ background: '#ffd000', color: '#000' }}>
                       詳しい情報を見る →
                     </Link>
                   </div>
