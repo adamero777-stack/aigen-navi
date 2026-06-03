@@ -50,7 +50,7 @@ export default function PopularTools({ tools }: { tools: Tool[] }) {
                 <Link href={'/tools/' + tool.id} style={{
                   fontSize: 12, fontWeight: 700, color: '#1a1a1a',
                   textDecoration: 'none', padding: '6px 16px', borderRadius: 20,
-                  background: '#EAB308',
+                  background: '#ffd000',
                 }}>詳しく見る</Link>
                 {ctaUrl && (
                   <a href={ctaUrl} target="_blank" rel="noopener noreferrer" style={{
