@@ -54,9 +54,9 @@ export default function PopularTools({ tools }: { tools: Tool[] }) {
                 }}>詳しく見る</Link>
                 {ctaUrl && (
                   <a href={ctaUrl} target="_blank" rel="noopener noreferrer" style={{
-                    fontSize: 12, fontWeight: 700, color: '#fff',
+                    fontSize: 12, fontWeight: 700, color: 'var(--color-accent)',
                     textDecoration: 'none', padding: '6px 16px', borderRadius: 20,
-                    background: 'var(--color-accent)',
+                    border: '2px solid var(--color-accent)', background: '#fff',
                   }}>公式サイト →</a>
                 )}
               </div>
