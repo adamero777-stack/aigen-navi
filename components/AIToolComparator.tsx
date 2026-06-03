@@ -294,7 +294,7 @@ export default function AIToolComparator({ tools }: Props) {
                       詳しい情報を見る →
                     </Link>
                     {(r.tool.affiliateUrl || r.tool.websiteUrl) && (
-                      <a href={r.tool.affiliateUrl || r.tool.websiteUrl} target="_blank" rel={r.tool.affiliateUrl ? "sponsored noopener noreferrer" : "noopener noreferrer"} className="btn-accent">
+                      <a href={r.tool.affiliateUrl || r.tool.websiteUrl} target="_blank" rel={r.tool.affiliateUrl ? "sponsored noopener noreferrer" : "noopener noreferrer"} className="btn-accent" style={{ background: '#fff', color: 'var(--color-accent)', border: '2px solid var(--color-accent)' }}>
                         {r.tool.affiliateUrl ? '公式サイトを見る（PR）' : '公式サイトを見る'}
                         <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                       </a>
