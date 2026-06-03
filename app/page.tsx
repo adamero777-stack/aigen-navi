@@ -4,6 +4,9 @@ import BackToTop from '@/components/BackToTop';
 import ToolsSidebar from '@/components/ToolsSidebar';
 import PurposeSidebar from '@/components/PurposeSidebar';
 import type { Tool } from '@/types/tool';
+import PopularTools from '@/components/PopularTools';
+import LatestArticles from '@/components/LatestArticles';
+import TrustBar from '@/components/TrustBar';
 import toolsData from '@/data/tools.json';
 
 export const metadata = {
@@ -22,6 +25,11 @@ export default function Home() {
       <main className="main-area">
         <div id="diagnosis" style={{ maxWidth: 620, margin: '0 auto', padding: '40px 20px 80px' }}>
           <AIToolComparator tools={tools} />
+        </div>
+        <div style={{ maxWidth: 620, margin: '0 auto', padding: '0 20px 40px' }}>
+          <PopularTools tools={tools} />
+          <LatestArticles />
+          <TrustBar />
         </div>
         <footer style={{ borderTop: '1px solid var(--color-border)', padding: '32px 20px', textAlign: 'center' }}>
           <p style={{ fontSize: 12, color: 'var(--color-text-muted)' }}>
