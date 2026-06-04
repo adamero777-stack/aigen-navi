@@ -53,6 +53,16 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'AIGEN NAVI',
+  url: 'https://aigen-navi.jp',
+  logo: 'https://aigen-navi.jp/logo.png',
+  description: 'AI画像・動画・音楽生成ツールを比較・診断するメディア',
+  sameAs: ['https://x.com/aigen_navi', 'https://note.com/aigennavi'],
+};
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
@@ -73,6 +83,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
       <body>
