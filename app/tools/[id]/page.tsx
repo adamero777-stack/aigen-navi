@@ -61,6 +61,21 @@ export default async function ToolDetailPage({ params }: { params: Promise<{ id:
             }),
           }}
         />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            'itemListElement': [
+              { '@type': 'ListItem', 'position': 1, 'name': 'ホーム', 'item': 'https://aigen-navi.jp' },
+              { '@type': 'ListItem', 'position': 2, 'name': 'ツール一覧', 'item': 'https://aigen-navi.jp/tools' },
+              { '@type': 'ListItem', 'position': 3, 'name': tool.name, 'item': `https://aigen-navi.jp/tools/${tool.id}` },
+            ],
+          }),
+        }}
+      />
+
       <main className="main-area">
         <div style={{ maxWidth: 620, margin: '0 auto', padding: '40px 20px 80px' }}>
           <Link href="/" style={{ fontSize: 14, color: 'var(--color-text-muted)', textDecoration: 'none' }}>← トップへ戻る</Link>

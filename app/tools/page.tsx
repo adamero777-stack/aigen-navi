@@ -28,6 +28,22 @@ export default function ToolsListPage() {
       <ToolsSidebar />
       <PurposeSidebar />
       <main className="main-area">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            'itemListElement': tools.map((t: { id: string; name: string }, i: number) => ({
+              '@type': 'ListItem',
+              'position': i + 1,
+              'url': `https://aigen-navi.jp/tools/${t.id}`,
+              'name': t.name,
+            })),
+          }),
+        }}
+      />
+
         <div style={{ maxWidth: 620, margin: '0 auto', padding: '40px 20px 80px' }}>
           <Link href="/" style={{ fontSize: 14, color: 'var(--color-text-muted)', textDecoration: 'none' }}>← トップへ戻る</Link>
           <h1 style={{ fontSize: 28, marginTop: 20, marginBottom: 8 }}>AIツール一覧</h1>
