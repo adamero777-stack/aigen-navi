@@ -9,7 +9,7 @@ const NAV_LINKS = [
   { label: 'ツール一覧', href: '/tools' },
   { label: 'AI解説', href: '/guides' },
   { label: '解説動画', href: '/videos' },
-  { label: 'ブログ', href: '/blog' },
+  { label: 'note記事', href: '/blog' },
 ];
 
 export default function Header() {

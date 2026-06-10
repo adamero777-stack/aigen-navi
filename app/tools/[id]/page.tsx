@@ -202,7 +202,7 @@ export default async function ToolDetailPage({ params }: { params: Promise<{ id:
             <Link href="/tools" style={{ padding: '10px 20px', border: '1px solid #e5e7eb', borderRadius: 8, textDecoration: 'none', color: '#333', fontSize: 13, fontWeight: 600 }}>📋 ツール一覧</Link>
             <Link href="/#diagnosis" style={{ padding: '10px 20px', border: '1px solid #e5e7eb', borderRadius: 8, textDecoration: 'none', color: '#333', fontSize: 13, fontWeight: 600 }}>🔍 診断する</Link>
             <Link href="/videos" style={{ padding: '10px 20px', border: '1px solid #e5e7eb', borderRadius: 8, textDecoration: 'none', color: '#333', fontSize: 13, fontWeight: 600 }}>🎬 解説動画</Link>
-            <Link href="/blog" style={{ padding: '10px 20px', border: '1px solid #e5e7eb', borderRadius: 8, textDecoration: 'none', color: '#333', fontSize: 13, fontWeight: 600 }}>📝 ブログ</Link>
+            <Link href="/blog" style={{ padding: '10px 20px', border: '1px solid #e5e7eb', borderRadius: 8, textDecoration: 'none', color: '#333', fontSize: 13, fontWeight: 600 }}>📝 note記事</Link>
           </div>
         </div>
         <footer style={{ borderTop: '1px solid var(--color-border)', padding: '32px 20px', textAlign: 'center' }}>
@@ -210,7 +210,7 @@ export default async function ToolDetailPage({ params }: { params: Promise<{ id:
             <Link href="/" style={{ fontSize: 12, color: '#999', textDecoration: 'none' }}>トップ</Link>
             <Link href="/tools" style={{ fontSize: 12, color: '#999', textDecoration: 'none' }}>ツール一覧</Link>
             <Link href="/videos" style={{ fontSize: 12, color: '#999', textDecoration: 'none' }}>解説動画</Link>
-            <Link href="/blog" style={{ fontSize: 12, color: '#999', textDecoration: 'none' }}>ブログ</Link>
+            <Link href="/blog" style={{ fontSize: 12, color: '#999', textDecoration: 'none' }}>note記事</Link>
             <Link href="/purpose/music" style={{ fontSize: 12, color: '#999', textDecoration: 'none' }}>音楽AI</Link>
           </div>
           <p style={{ fontSize: 12, color: '#bbb', margin: 0 }}>© 2026 AIGEN NAVI — 料金情報は各公式サイトでご確認ください</p>

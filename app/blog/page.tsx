@@ -5,8 +5,8 @@ import PurposeSidebar from '@/components/PurposeSidebar';
 import BlogList from './BlogList';
 
 export const metadata = {
-  title: 'ブログ - AI画像・動画・音楽生成の最新情報',
-  description: 'AI画像・動画・音楽生成ツールの使い方、比較、最新ニュースをお届けするブログ。Midjourney、ChatGPT、Flux、Kling、Runwayなどの活用術。',
+  title: 'note記事 - AI画像・動画・音楽生成の最新情報',
+  description: 'AI画像・動画・音楽生成ツールの使い方、比較、最新ニュースをお届けするnote記事。Midjourney、ChatGPT、Flux、Kling、Runwayなどの活用術。',
   alternates: { canonical: 'https://aigen-navi.jp/blog' },
 };
 
@@ -49,7 +49,7 @@ export default async function BlogPage() {
       <PurposeSidebar />
       <main className="main-area">
         <div style={{ maxWidth: 620, margin: '0 auto', padding: '40px 20px 80px' }}>
-          <h1 style={{ fontSize: 28, marginBottom: 8 }}>ブログ</h1>
+          <h1 style={{ fontSize: 28, marginBottom: 8 }}>note記事</h1>
           <p style={{ color: 'var(--color-text-muted)', marginBottom: 32, lineHeight: 1.7 }}>
             AI画像・動画生成ツールの使い方や最新情報をお届けします。
           </p>
