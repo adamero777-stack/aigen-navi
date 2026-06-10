@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     description: '3つの質問で最適なAI画像・動画生成ツールが見つかる。主要15ツールを徹底比較。',
   },
   alternates: {
-    canonical: 'https://aigen-navi.jp',
+    canonical: './',
   },
   icons: {
     icon: '/logo.png',
