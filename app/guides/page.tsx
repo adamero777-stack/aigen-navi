@@ -1,5 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Header from '@/components/Header';
+import BackToTop from '@/components/BackToTop';
+import ToolsSidebar from '@/components/ToolsSidebar';
+import PurposeSidebar from '@/components/PurposeSidebar';
 import { guides } from '@/lib/guides';
 
 export const metadata: Metadata = {
@@ -21,7 +25,12 @@ export default function GuidesPage() {
   };
 
   return (
-    <main style={{ maxWidth: 900, margin: '0 auto', padding: '40px 20px' }}>
+    <>
+      <Header />
+      <ToolsSidebar />
+      <PurposeSidebar />
+      <main className="main-area">
+        <div style={{ maxWidth: 620, margin: '0 auto', padding: '40px 20px 80px' }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
@@ -33,7 +42,7 @@ export default function GuidesPage() {
         話題のAIサービスの「できること・料金・始め方」を初心者向けにまとめています。
       </p>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 16 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 16 }}>
         {guides.map((g) => (
           <div
             key={g.id}
@@ -84,6 +93,9 @@ export default function GuidesPage() {
           </div>
         ))}
       </div>
-    </main>
+        </div>
+      </main>
+      <BackToTop />
+    </>
   );
 }

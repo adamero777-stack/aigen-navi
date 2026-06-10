@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import Header from '@/components/Header';
+import BackToTop from '@/components/BackToTop';
+import ToolsSidebar from '@/components/ToolsSidebar';
+import PurposeSidebar from '@/components/PurposeSidebar';
 import { guides, getGuide } from '@/lib/guides';
 
 export function generateStaticParams() {
@@ -62,7 +66,12 @@ export default async function GuideDetailPage({
   };
 
   return (
-    <main style={{ maxWidth: 760, margin: '0 auto', padding: '40px 20px' }}>
+    <>
+      <Header />
+      <ToolsSidebar />
+      <PurposeSidebar />
+      <main className="main-area">
+        <div style={{ maxWidth: 620, margin: '0 auto', padding: '40px 20px 80px' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
@@ -194,6 +203,9 @@ export default async function GuideDetailPage({
             ))}
         </div>
       </section>
-    </main>
+        </div>
+      </main>
+      <BackToTop />
+    </>
   );
 }
