@@ -5,10 +5,10 @@ import Image from 'next/image';
 import logoImg from '@/public/logo.png';
 
 const NAV_LINKS = [
-  { label: 'ツール診断', href: '/#diagnosis' },
-  { label: 'ツール一覧', href: '/tools' },
-  { label: 'AI解説', href: '/guides' },
-  { label: '解説動画', href: '/videos' },
+  { label: 'AIツール診断', href: '/#diagnosis' },
+  { label: 'AIツール一覧', href: '/tools' },
+  { label: 'AIサービス解説ガイド', href: '/guides' },
+  { label: '最新AI解説動画', href: '/videos' },
   { label: 'note記事', href: '/blog' },
 ];
 
